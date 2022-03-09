@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import FeedbackList from './components/FeedbackList';
+import FeedbackStats from './components/FeedbackStats';
 import Header from './components/Header';
 
 import FeedbackData from './data/FeedbackData';
@@ -16,7 +17,11 @@ const App = () => {
   return (
     <>
       <Header />
-      <FeedbackList feedback={feedback} handleDelete={deleteFeedback} />
+      <div className='container'>
+        <FeedbackStats feedback={feedback} />{' '}
+        {/* Passing in the feedback array */}
+        <FeedbackList feedback={feedback} handleDelete={deleteFeedback} />
+      </div>
     </>
   );
 };
