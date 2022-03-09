@@ -1,10 +1,11 @@
+import FeedbackItem from './components/FeedbackItem';
 import Header from './components/Header';
 
 const App = () => {
   return (
     <>
       <Header />
-      <h1>My App</h1>
+      <FeedbackItem />
     </>
   );
 };
