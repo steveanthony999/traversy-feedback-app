@@ -16,14 +16,9 @@
       "id": 4
     },
     {
-      "rating": "4",
-      "text": "This is a bunch of caca doodie",
+      "text": "This is a bunch of caca doodie updated",
+      "rating": 9,
       "id": 5
-    },
-    {
-      "text": "This is a test from the frontend",
-      "rating": 5,
-      "id": 6
     }
   ]
 }
