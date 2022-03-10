@@ -10,6 +10,9 @@ import FeedbackStats from './components/FeedbackStats';
 import Header from './components/Header';
 
 import FeedbackData from './data/FeedbackData';
+
+import { FeedbackProvider } from './context/FeedbackContext';
+
 import AboutIconLink from './components/AboutIconLink';
 
 const App = () => {
@@ -27,30 +30,32 @@ const App = () => {
   };
 
   return (
-    <Router>
-      <Header />
-      <div className='container'>
-        <Routes>
-          <Route
-            exact
-            path='/'
-            element={
-              <>
-                <FeedbackForm handleAdd={addFeedback} />
-                <FeedbackStats feedback={feedback} />{' '}
-                {/* Passing in the feedback array */}
-                <FeedbackList
-                  feedback={feedback}
-                  handleDelete={deleteFeedback}
-                />
-              </>
-            }></Route>
-          <Route path='/about' element={<About />} />
-        </Routes>
+    <FeedbackProvider>
+      <Router>
+        <Header />
+        <div className='container'>
+          <Routes>
+            <Route
+              exact
+              path='/'
+              element={
+                <>
+                  <FeedbackForm handleAdd={addFeedback} />
+                  <FeedbackStats feedback={feedback} />{' '}
+                  {/* Passing in the feedback array */}
+                  <FeedbackList
+                    feedback={feedback}
+                    handleDelete={deleteFeedback}
+                  />
+                </>
+              }></Route>
+            <Route path='/about' element={<About />} />
+          </Routes>
 
-        <AboutIconLink />
-      </div>
-    </Router>
+          <AboutIconLink />
+        </div>
+      </Router>
+    </FeedbackProvider>
   );
 };
 
