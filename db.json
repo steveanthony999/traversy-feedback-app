@@ -19,6 +19,11 @@
       "rating": "4",
       "text": "This is a bunch of caca doodie",
       "id": 5
+    },
+    {
+      "text": "This is a test from the frontend",
+      "rating": 5,
+      "id": 6
     }
   ]
 }
