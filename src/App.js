@@ -41,12 +41,8 @@ const App = () => {
               element={
                 <>
                   <FeedbackForm handleAdd={addFeedback} />
-                  <FeedbackStats feedback={feedback} />{' '}
-                  {/* Passing in the feedback array */}
-                  <FeedbackList
-                    feedback={feedback}
-                    handleDelete={deleteFeedback}
-                  />
+                  <FeedbackStats />
+                  <FeedbackList handleDelete={deleteFeedback} />
                 </>
               }></Route>
             <Route path='/about' element={<About />} />
